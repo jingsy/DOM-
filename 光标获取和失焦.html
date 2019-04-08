@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>函数定义</title>
+  <style type="text/css">
+  	input{
+  		color: #ccc;
+  	}
+
+	label{
+		position: absolute;
+		left: 53px;
+		color: pink;
+		z-index: 1
+	}
+	#input2{
+		position: relative;
+		left: 25px;
+	}
+	.show{
+		display: block;
+	}
+	.hide{
+		display: none;
+	}
+  	
+  </style>
+</head>
+<body>
+	京东<input type="text" name="jd" id="input1" value="jd"><br><br>
+	<label for="input2">我是淘宝</label><input type="text" name="jd" id="input2">
+	
+  <script type="text/javascript">
+  	//JD的获取焦点
+  	//实现鼠标失去焦点和获取焦点时对文本框的操作
+	// var input1 = document.getElementById("input1");
+	// //获得焦点
+	// input1.onfocus = function(){
+	// 	//	如果值为jd，当用户点击时，则变为空字符串，并改变成黑色
+	// 	if (this.value === "jd") {
+	// 		this.value = "";
+	// 		input1.style.color="#000";
+	// 	}else {	
+	// 	}		
+	// }
+	// //失去焦点
+	// input1.onblur= function(){
+	// 	if (this.value==="") {
+	// 		this.value ="jd";
+	// 		input1.style.color="#ccc";
+	// 	}
+	// }
+
+	//淘宝的获取焦点，在input输入文字，label标签隐藏，里面的文字变成空字符串，label标签显示
+	//获取事件和相关元素
+	var input2 = document.getElementById("input2");
+	var label = document.getElementsByTagName("label")[0];
+	//绑定事件(绑定一个输入事件)
+	input2.oninput=function(){
+		//判断input的值是否为空，如果为空，显示label
+		if (this.value==="") {
+			label.className = "show";
+		}else {
+			label.className = "hide";
+		}
+	}
+
+
+    
+  </script>
+</body>
+</html>

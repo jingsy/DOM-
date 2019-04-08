@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			margin:50px;
+		}
+		ul li a img {
+			height: 100px;
+			width: 100px;
+		}
+		ul li {
+			list-style: none;
+			display: inline-block;
+			border: 2px solid black;
+		}
+		.box{
+			height: 400px;
+			width: 400px;
+			border: 1px solid gray;
+		}
+	</style>
+</head>
+<body>
+	<h1>画廊</h1>
+	<ul>
+		<li>
+			<a href="#" title="pic1">
+				<img src="../../image/eevee.png" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="#" title="pic2">
+				<img src="../../image/charmander.png" alt="">
+			</a>
+		</li>
+	</ul>
+	
+	<div class="box">
+		<img src="../../image/background.jpeg" width="400px" height="400px">
+	</div>
+	<script type="text/javascript">
+		// var pic1 = document.getElementsByTagName("a")[0];
+		// var pic2 = document.getElementsByTagName("a")[1];
+		// console.log(pic1);
+		// var div = document.getElementsByTagName("div")[0];
+		// var placeHolder = div.getElementsByTagName("img")[0];
+
+
+		//分别绑定
+		// pic1.onclick = function(){
+		// 	placeHolder.src="../../image/eevee.png";
+		// }
+
+		// pic2.onclick = function(){
+		// 	placeHolder.src="../../image/charmander.png";
+		// }
+
+		//***************************************************
+		//更好的方法
+		//用数组进行绑定
+		var pics = document.getElementsByTagName("img");
+
+		//获取placeholder
+		var div = document.getElementsByTagName("div")[0];
+		var placeHolder = div.getElementsByTagName("img")[0];
+
+		for (var i = 0; i < pics.length; i++) {
+			pics[i].onclick=function(){
+				//this指的是函数调用者 和i并无关系 所以不会出错
+				//循环绑定一定要使用this
+				placeHolder.src=this.src;
+			}
+		}
+
+
+
+
+
+
+
+		
+	</script>
+</body>
+</html>

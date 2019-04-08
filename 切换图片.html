@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<a href="#" style="display: block;">切换</a>
+	<img src="../../image/eevee.png" width="400px">
+	<script type="text/javascript">
+		//点击a链接，img图片切换（行内式）
+
+		var a = document.getElementsByTagName("a")[0];
+		var img = document.getElementsByTagName("img")[0];
+		a.onclick = function(){
+			img.src="../../image/bulbasaur.png";
+		}
+	</script>
+
+</html>

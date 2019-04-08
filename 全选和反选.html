@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table{
+			border: 1px solid black;
+			width: 300px;
+			height: 300px;
+		}
+		td,th{
+			border: 2px solid black;
+			height: 100px;
+			text-align: center;
+		}
+		
+
+	
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th><input type="checkbox" name=""></th>
+				<th>菜名</th>
+				<th>饭店🏨</th>
+			</tr>
+		</thead>
+		<thead>
+			<tr>
+				<th><input type="checkbox" name=""></th>
+				<td>红烧鱼</td>
+				<td>红烧鱼</td>
+			</tr>
+		</thead>
+		<thead>
+			<tr>
+				<th><input type="checkbox" name=""></th>
+				<td>红烧鱼</td>
+				<td>红烧鱼</td>
+			</tr>
+		</thead>
+	</table>
+
+	<script type="text/javascript">
+		 //点击上面的按钮，如果上面的按钮是true，把下面全变成false，如果上面是false，把下面全变成true
+
+		 var thArr = document.getElementsByTagName("th");
+		 var inputArr = document.getElementsByTagName("input");
+		 
+
+		 inputArr[0].onclick = function(){
+		 	if (inputArr[0].checked) {
+		 		for (var i = 0; i < inputArr.length; i++) {
+		 			inputArr[i].checked=true;
+		 		}
+		 	}else {
+		 		for (var i = 0; i < inputArr.length; i++) {
+		 			inputArr[i].checked=false;
+		 		}
+		 	}
+		 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

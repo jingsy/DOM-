@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<input type="text" name=""><br><br>
+	<input type="text" name=""><br><br>
+	<input type="text" name=""><br><br>
+	<input type="text" name=""><br><br>
+	<input type="text" name=""><br><br>
+	<input type="text" name=""><br><br>
+
+	<button>赋值</button><br><br>
+	<button>取值</button>
+
+	<script type="text/javascript">
+		//获取事件
+		var btnArr= document.getElementsByTagName("button"); 
+		var inputArr = document.getElementsByTagName("input");
+
+		//绑定事件源
+		//一键赋值
+		btnArr[0].onclick=function(){
+			for (var i = 0; i < inputArr.length; i++) {
+				inputArr[i].value = i;
+			}
+		}
+		//一键取值
+		btnArr[1].onclick = function(){
+			var arr = [];
+			for (var i = 0; i < inputArr.length; i++) {
+				// arr[i]=inputArr[i].value; 
+
+				//这一行代码：push（）方法注入数组，跟上一行代码得到的结果一样
+				arr.push(inputArr[i].value);
+			}
+			console.log(arr);
+		}
+
+ 
+	</script>
+</body>
+</html>

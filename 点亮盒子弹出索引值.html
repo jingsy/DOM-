@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	button{
+		margin: 10px;
+		width: 100px;
+		height: 40px;
+	}
+
+	.c{
+		background-color: red;
+	}
+</style>
+</head>
+<body>
+	<button>按钮</button>
+	<button>按钮</button>
+	<button>按钮</button>
+	<button>按钮</button>
+	<button>按钮</button>
+
+	<script type="text/javascript">
+		
+		var btn = document.getElementsByTagName('button');
+
+		for (var i = 0; i < btn.length; i++) {
+				//每次循环绑定一个属性，属性值为该盒子的索引值
+				btn[i].setAttribute("index",i);
+				//	页面上没有的属性 比如这里的index，不能用this.index这种方法获取，要用方法获取
+
+
+				btn[i].onmouseover=function() {
+					//排他思想：干掉所有人剩下我自己
+					//适合for循环连用
+					for (var j = 0; j < btn.length; j++) {
+						btn[j].className="";
+					}
+
+					this.className="c"; 
+					alert(this.getAttribute("index "));
+				}
+
+			}
+
+
+
+
+		</script>
+	</body>
+	</html>

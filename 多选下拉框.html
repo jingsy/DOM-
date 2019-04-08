@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+
+	</style>
+</head>
+<body>
+	<button>识别水产</button><br><br>
+	<select id="select">
+		<option value="0">苹果🍎</option>
+		<option value="1">香蕉🍌</option>
+		<option value="2">栗子🌰</option>
+		<option value="3">鲤鱼🐟</option>
+	</select>
+
+
+	<script type="text/javascript">
+		//需求：点击识别水产，立刻把option对应的鲤鱼选择的属性设置为selected
+		var btn = document.getElementsByTagName("button")[0];
+		var select = document.getElementById("select");
+
+		//绑定事件,点击button，select里面变成水产
+		btn.onclick = function(){
+			var fish = select.getElementsByTagName("option")[3];
+			fish.selected="true";
+		}
+
+
+	</script>
+</body>
+</html>

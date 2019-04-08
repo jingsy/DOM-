@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div id="box" title="主题" class="aaa">我爱你中国</div>
+
+	<script type="text/javascript">
+		var div = document.getElementById("box");
+
+		//元素节点，属性（元素节点【属性】：绑定的属性值不会出现在标签上
+		//get/set/removeAttribute:绑定的属性值会出现在标签上
+		div.aaa ="111";
+		console.log(div.aaa);
+		div.setAttribute("bbb","2 222");
+
+
+
+	</script>
+	 
+</body>
+</html>
